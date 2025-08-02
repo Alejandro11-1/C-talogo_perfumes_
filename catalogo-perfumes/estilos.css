@@ -1,0 +1,194 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fdfcfb;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3em;
+    margin: 0;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* --- Contenedor de Casas (Grid) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* --- Tarjeta de cada Casa --- */
+.casa-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.casa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.casa-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.casa-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6em;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Contenedor de Perfumes --- */
+#perfumes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ================================================= */
+/* === NUEVOS ESTILOS PARA LA TARJETA DE PERFUME === */
+/* ================================================= */
+
+.perfume-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.perfume-item:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.perfume-imagen {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* 'contain' muestra la botella completa sin cortar */
+    border-radius: 8px;
+    flex-shrink: 0; /* Evita que la imagen se deforme si el texto es largo */
+}
+
+.perfume-info {
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.perfume-info .nombre {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.perfume-info .familia, .perfume-info .genero {
+    font-size: 0.9em;
+    color: #666;
+    margin: 4px 0;
+    text-transform: capitalize;
+}
+
+.perfume-item .precio {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #c09f80;
+    text-align: right;
+    white-space: nowrap; /* Evita que el precio se parta en dos líneas */
+}
+
+/* --- Botón de Volver y Clases de Utilidad --- */
+#back-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #c09f80;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #a98c70;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================================== */
+/* === ESTILOS PARA RESPONSIVIDAD (MÓVIL) === */
+/* =========================================== */
+
+@media (max-width: 600px) {
+    #main-title {
+        font-size: 2.2em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .perfume-item {
+        flex-direction: column; /* Apila la imagen y el texto verticalmente */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .perfume-imagen {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .perfume-item .precio {
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
