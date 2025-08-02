@@ -192,3 +192,31 @@ footer {
         width: 100%;
     }
 }
+/* Reemplaza los estilos del footer con este bloque actualizado */
+
+/* --- ESTILOS PARA EL FOOTER Y CONTACTO (CORREGIDO) --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+/* Estilo general para el título "Contacto:" */
+.contact-info p {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Selector corregido para ser más específico */
+.contact-info .phone-numbers { /* <-- CAMBIO AQUÍ */
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #c09f80; /* Tono dorado/bronce */
+}
